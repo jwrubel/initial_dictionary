@@ -17,7 +17,7 @@ rb = ratebeer.RateBeer()
 
 with open("eng.user_words",'w') as f:
     for category in categories:
-        brewery_list = rb.brewers_by_alpha(letter)
+        brewery_list = rb.brewers_by_alpha(category)
         for brewery in brewery_list:
             f.writelines(brewery.name.encode('utf8') + "\n")
             beer_list = brewery.get_beers()
